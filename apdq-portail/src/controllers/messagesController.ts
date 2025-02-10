@@ -185,17 +185,22 @@ class MessageController {
     }
   }
 
-  private handleError(error: AxiosError<APIErrorResponse>): void {
-    let errorMessage = 'An error occurred';
-
-    if (error.response?.data?.detail) {
-      errorMessage = error.response.data.detail;
-    } else if (error.request) {
-      errorMessage = 'No response received from server';
+  async deleteMultipleGarageMessages(
+    messageIds: number[]
+  ): Promise<DeleteMessageResponse | null> {
+    try {
+      const response = await this.axios.delete(
+        '/garages/api/v1/delete_garage_messages',
+        {
+          data: { message_ids: messageIds },
+        }
+      );
+      return response.data;
+    } catch (error) {
+      console.log('Full error:', error);
+      this.handleError(error as AxiosError<APIErrorResponse>);
+      return null;
     }
-
-    console.error('MessageController Error:', errorMessage);
-    throw new Error(errorMessage);
   }
 
   async deleteMultipleAdminMessages(
@@ -213,6 +218,19 @@ class MessageController {
       this.handleError(error as AxiosError<APIErrorResponse>);
       return null;
     }
+  }
+
+  private handleError(error: AxiosError<APIErrorResponse>): void {
+    let errorMessage = 'An error occurred';
+
+    if (error.response?.data?.detail) {
+      errorMessage = error.response.data.detail;
+    } else if (error.request) {
+      errorMessage = 'No response received from server';
+    }
+
+    console.error('MessageController Error:', errorMessage);
+    throw new Error(errorMessage);
   }
 }
 

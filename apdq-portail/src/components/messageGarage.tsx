@@ -31,7 +31,7 @@ import messageController from '../controllers/messagesController';
 import { dashboardUserController } from '../controllers/dashboardUserController';
 import { format } from 'date-fns';
 import apdqLogo from '/assets/png/apdq.png';
-// import { t } from 'i18next';  // If you’re using i18n, otherwise omit
+import { t } from 'i18next';
 
 interface Remorqueur {
   id: number;
@@ -212,9 +212,13 @@ const MessageGarage: React.FC = () => {
                   }}
                 />
               </TableCell>
-              <TableCell>Titre</TableCell>
+              <TableCell>
+                {t('data.messages.dashboard_message_tow.title')}
+              </TableCell>
               <TableCell>Message</TableCell>
-              <TableCell>Destinataires</TableCell>
+              <TableCell>
+                {t('data.messages.dashboard_message_tow.sent_to')}
+              </TableCell>
               <TableCell>Date</TableCell>
               <TableCell>Actions</TableCell>
             </TableRow>
@@ -238,7 +242,10 @@ const MessageGarage: React.FC = () => {
                 <TableCell>{message.content}</TableCell>
                 <TableCell>
                   {message.to_all ? (
-                    <Chip label='Tous les remorqueurs' color='primary' />
+                    <Chip
+                      label={t('data.messages.dashboard_message_tow.all')}
+                      color='primary'
+                    />
                   ) : (
                     message.remorqueur_ids.map((id) => {
                       const r = remorqueurs.find((rm) => rm.id === id);
@@ -291,8 +298,12 @@ const MessageGarage: React.FC = () => {
                   }}
                 />
               </TableCell>
-              <TableCell>Sent by</TableCell>
-              <TableCell>Titre</TableCell>
+              <TableCell>
+                {t('data.messages.dashboard_message_tow.sent_by')}
+              </TableCell>
+              <TableCell>
+                {t('data.messages.dashboard_message_tow.title')}
+              </TableCell>
               <TableCell>Message</TableCell>
               <TableCell>Date</TableCell>
               <TableCell>Actions</TableCell>
@@ -344,8 +355,14 @@ const MessageGarage: React.FC = () => {
     <Box sx={{ p: 3 }}>
       {/* Tabs */}
       <Tabs value={activeTab} onChange={handleTabChange}>
-        <Tab label='Inbox' value='inbox' />
-        <Tab label='Sent' value='sent' />
+        <Tab
+          label={t('data.messages.dashboard_message_tow.inbox')}
+          value='inbox'
+        />
+        <Tab
+          label={t('data.messages.dashboard_message_tow.sent')}
+          value='sent'
+        />
       </Tabs>
 
       <Box sx={{ mt: 2 }}>
@@ -358,11 +375,25 @@ const MessageGarage: React.FC = () => {
                 color='error'
                 sx={{ mb: 2 }}
                 startIcon={<DeleteIcon />}
-                onClick={() => {
-                  // Example of bulk-deleting admin messages if your endpoint allows it
-                  // Or just do single-delete in a loop
+                onClick={async () => {
+                  try {
+                    const response =
+                      await messageController.deleteMultipleAdminMessages(
+                        selectedInbox
+                      );
+                    if (response) {
+                      // Update the inbox messages list by removing the deleted messages
+                      setInboxMessages((prev) =>
+                        prev.filter((msg) => !selectedInbox.includes(msg.id))
+                      );
+                      setSelectedInbox([]); // Clear selection after successful deletion
+                    }
+                  } catch (error) {
+                    console.error('Failed to delete messages:', error);
+                  }
                 }}>
-                Delete selected ({selectedInbox.length})
+                {t('data.messages.dashboard_message_tow.deleted_selected')} (
+                {selectedInbox.length})
               </Button>
             )}
             <InboxMessagesTable />
@@ -381,17 +412,32 @@ const MessageGarage: React.FC = () => {
                   backgroundColor: '#48BA65',
                   '&:hover': { backgroundColor: '#3a9651' },
                 }}>
-                Nouveau message
+                {t('data.messages.dashboard_message_tow.new')}
               </Button>
               {selectedSent.length > 0 && (
                 <Button
                   variant='contained'
                   color='error'
                   startIcon={<DeleteIcon />}
-                  onClick={() => {
-                    // Bulk-delete logic for "sentMessages" if you have that endpoint
+                  onClick={async () => {
+                    try {
+                      const response =
+                        await messageController.deleteMultipleGarageMessages(
+                          selectedSent
+                        );
+                      if (response) {
+                        // Update the inbox messages list by removing the deleted messages
+                        setSentMessages((prev) =>
+                          prev.filter((msg) => !selectedSent.includes(msg.id))
+                        );
+                        setSelectedSent([]); // Clear selection after successful deletion
+                      }
+                    } catch (error) {
+                      console.error('Failed to delete messages:', error);
+                    }
                   }}>
-                  Delete selected ({selectedSent.length})
+                  {t('data.messages.dashboard_message_tow.deleted_selected')} (
+                  {selectedSent.length})
                 </Button>
               )}
             </Box>
@@ -409,7 +455,9 @@ const MessageGarage: React.FC = () => {
         }}
         maxWidth='sm'
         fullWidth>
-        <DialogTitle>Nouveau message</DialogTitle>
+        <DialogTitle>
+          {t('data.messages.dashboard_message_tow.new')}
+        </DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
@@ -447,12 +495,15 @@ const MessageGarage: React.FC = () => {
                 }
               />
             }
-            label='Envoyer à tous les remorqueurs ?'
+            label={t('data.messages.dashboard_message_tow.send_all')}
           />
           {/* If not sending to all, let user pick from remorqueurs */}
           {!newMessage.to_all && (
             <FormControl fullWidth margin='dense'>
-              <InputLabel>Choisir remorqueurs</InputLabel>
+              <InputLabel>
+                {' '}
+                {t('data.messages.dashboard_message_tow.chose_tow')}
+              </InputLabel>
               <Select
                 multiple
                 value={newMessage.remorqueur_ids}
@@ -479,7 +530,7 @@ const MessageGarage: React.FC = () => {
               setOpenDialog(false);
               resetNewMessage();
             }}>
-            Annuler
+            {t('data.messages.dashboard_message_admin.cancel')}
           </Button>
           <Button
             variant='contained'
@@ -488,7 +539,7 @@ const MessageGarage: React.FC = () => {
               '&:hover': { backgroundColor: '#3a9651' },
             }}
             onClick={handleCreateMessage}>
-            Envoyer
+            {t('data.messages.dashboard_message_admin.send')}
           </Button>
         </DialogActions>
       </Dialog>

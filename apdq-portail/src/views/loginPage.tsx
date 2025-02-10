@@ -74,7 +74,7 @@ const LoginPage: React.FC = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'linear-gradient(to bottom right, #14B8A6, #16A34A)',
+        background: 'linear-gradient(to right, #14B8A6, #16A34A)',
         padding: 2,
         position: 'relative',
       }}>
@@ -200,6 +200,7 @@ const LoginPage: React.FC = () => {
                 mb: 2,
                 color: '#FFF',
                 position: 'relative',
+                background: 'linear-gradient(to right, #12BCC1, #48BA65)',
               }}>
               {t('login.submit')}
             </Button>

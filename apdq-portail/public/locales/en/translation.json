@@ -260,6 +260,18 @@
         "send": "Send",
         "cancel": "Cancel",
         "delete": "Delete"
+      },
+      "dashboard_message_tow": {
+        "sent_by": "Posted by",
+        "sent": "Sent",
+        "inbox": "Inbox",
+        "title": "Title",
+        "sent_to": "Recipients",
+        "new": "New message",
+        "all": "All towings",
+        "deleted_selected": "All messages selected",
+        "chose_tow": "Choose towing",
+        "send_all": "Send to all towings ?"
       }
     },
     "vehicleDetails": {

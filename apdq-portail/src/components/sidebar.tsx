@@ -49,7 +49,10 @@ const Sidebar: React.FC<SidebarProps> = ({ onViewChange, currentView }) => {
     }
 
     // Message garage view - only for garage role
-    if (menuTitle === DashboardView.MESSAGEGARAGE) {
+    if (
+      menuTitle === DashboardView.MESSAGEGARAGE ||
+      menuTitle === DashboardView.SUPPORT
+    ) {
       return hasRole('garage');
     }
 

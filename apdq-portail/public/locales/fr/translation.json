@@ -261,6 +261,18 @@
         "send": "Envoyer",
         "cancel": "Annuler",
         "delete": "Supprimer"
+      },
+      "dashboard_message_tow": {
+        "sent_by": "Envoyé par",
+        "sent": "Envoyé",
+        "inbox": "Boîte de réception",
+        "title": "Titre",
+        "sent_to": "Destinataires",
+        "new": "Nouveau message",
+        "all": "Tous les dépanneuses",
+        "deleted_selected": "Supprimer les messages sélectionnés",
+        "chose_tow": "Choisir les dépanneuses",
+        "send_all": "Envoyer à tous les remorqueurs ?"
       }
     },
     "vehicleDetails": {
