@@ -1,0 +1,275 @@
+{
+  "login": {
+    "title": "Login to your account",
+    "subtitle": "Please enter your username and password.",
+    "username": {
+      "label": "Username",
+      "placeholder": "Enter your username"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password"
+    },
+    "rememberMe": "Remember password",
+    "forgotPassword": "Forgot password?",
+    "submit": "Login",
+    "errors": {
+      "default": "Payment is required, then you can log in"
+    }
+  },
+  "FAQ": {
+    "create": "Create FAQ",
+    "noFaqs": "No FAQs available",
+    "question": {
+      "label": "Question",
+      "required": "question is required"
+    },
+    "answer": {
+      "label": "Answer",
+      "required": "answer is required"
+    },
+    "delete": {
+      "title": "Delete",
+      "confirmation": "Are you sure you want to delete this FAQ?",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "language": {
+      "select": "Select language",
+      "english": "English",
+      "french": "Français"
+    },
+    "submit": "Create",
+    "FaqList": "List of FAQs"
+  },
+  "dashboard": {
+    "garages": {
+      "count": "Company Count: ",
+      "success": "Garage created successfully!",
+      "createGargage": "Create Garage",
+      "vehicle": {
+        "singular": "user",
+        "plural": "users",
+        "noVehicles": "No users"
+      },
+      "title": "Garage Management",
+      "search": "Search garages...",
+      "viewDetails": "Click to view details",
+      "noDrivers": "No drivers assigned",
+      "summary": {
+        "totalGarages": "Total Garages",
+        "activeGarages": "Active Garages",
+        "totalDrivers": "Total Drivers"
+      },
+      "table": {
+        "garageName": "Garage Name",
+        "totalDrivers": "Total Drivers",
+        "details": "View Drivers",
+        "location": "Location",
+        "manager": "Manager",
+        "status": "Status",
+        "nameAndSurname": "First and Last Name",
+        "phoneNumber": "Phone Number",
+        "username": "Username",
+        "password": "Password",
+        "email": "Email"
+      },
+      "status": {
+        "label": "Status",
+        "all": "All Garages",
+        "active": "Active",
+        "inactive": "Inactive",
+        "paid": "Subscription Paid",
+        "unpaid": "Payment required"
+      },
+      "filters": {
+        "searchPlaceholder": "Search by garage name",
+        "status": "Filter by status"
+      },
+      "errors": {
+        "loadFailed": "Failed to load garages data",
+        "noPermission": "You don't have permission to view this data"
+      },
+      "settings": {
+        "title": "Modify your password",
+        "button": "Update Password",
+        "buttonUpdating": "Updating...",
+        "garageName": "Garage Name",
+        "username": "Username",
+        "newPassword": "New Password",
+        "confirmPassword": "Confirm Password",
+        "currentUsername": "Current Username",
+        "newUsername": "New Username",
+        "manageBilling": "Manage Billing"
+      }
+    },
+    "navigation": {
+      "users": "Users",
+      "messages": "Messages",
+      "subscriptions": "Subscriptions",
+      "faq": "FAQ Admin",
+      "support": "Support/FAQ",
+      "data": "Data Entries",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "users": {
+      "title": "User Management",
+      "search": "Search",
+      "status": {
+        "label": "Status",
+        "all": "All",
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "table": {
+        "nameAndSurname": "First and Last Name",
+        "phoneNumber": "Phone Number",
+        "status": "Status",
+        "actions": "Actions",
+        "username": "Username"
+      },
+      "create": {
+        "title": "Create User",
+        "button": "New User",
+        "name": "Name",
+        "tel": "Phone",
+        "username": "Username",
+        "password": "Password",
+        "cancel": "Cancel",
+        "confirm": "Create",
+        "success": "User created successfully",
+        "error": {
+          "requiredFields": "Please fill in all required fields",
+          "generic": "An error occurred while creating the user",
+          "noAuth": "Authentication required",
+          "noUser": "User information not available",
+          "noGarage": "Garage information not available"
+        }
+      },
+      "edit": {
+        "title": "Edit User",
+        "name": "Name",
+        "tel": "Phone",
+        "username": "Username",
+        "password": "Password",
+        "status": "Status",
+        "save": "Save",
+        "cancel": "Cancel",
+        "success": "User updated successfully",
+        "error": "Error updating user",
+        "placeholder": "Leave blank to keep current password"
+      },
+      "delete": {
+        "title": "Delete User",
+        "confirmation": "Are you sure you want to delete user ?",
+        "cancel": "Cancel",
+        "confirm": "Delete",
+        "success": "User deleted successfully",
+        "error": "Error deleting user"
+      }
+    }
+  },
+  "data": {
+    "title": "Vehicle Files Management",
+    "createVehicle": "Create Vehicle",
+    "noVehicles": {
+      "empty": "No vehicles found. Create a vehicle to manage its files.",
+      "noMatch": "No vehicles found matching your search."
+    },
+    "form": {
+      "brand": {
+        "label": "Brand",
+        "required": "Brand is required"
+      },
+      "model": {
+        "label": "Model",
+        "required": "Model is required"
+      },
+      "yearFrom": {
+        "label": "Year From",
+        "required": "Starting year is required"
+      },
+      "yearTo": {
+        "label": "Year To"
+      },
+      "delayTimeNeutral": {
+        "label": "Delay Time Neutral"
+      },
+      "delayTimeDeactivation": {
+        "label": "Delay Time Deactivation"
+      },
+      "files": {
+        "title": "Procedure Documents",
+        "images": "Images",
+        "selectNeutral": "Select Neutral PDF",
+        "selectDeactivation": "Select Deactivation PDF",
+        "selectImage": "Select Image"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "create": "Create Vehicle",
+        "update": "Update Vehicle"
+      }
+    },
+    "fileManagement": {
+      "upload": "Upload",
+      "update": "Update",
+      "uploadedFiles": "Uploaded Files",
+      "neutralProcedure": "Neutral Procedure PDFs",
+      "deactivationProcedure": "Deactivation Procedure PDFs",
+      "images": "Images",
+      "fileSize": "Size: {{size}}",
+      "buttons": {
+        "uploadNeutral": "{{action}} Neutral PDF",
+        "uploadDeactivation": "{{action}} Deactivation PDF",
+        "uploadImage": "{{action}} Image"
+      }
+    },
+    "messages": {
+      "success": {
+        "create": "Vehicle and files created successfully",
+        "update": "Vehicle updated successfully",
+        "fileUpload": "{{type}} uploaded successfully",
+        "fileUpdate": "{{type}} updated successfully",
+        "fileDelete": "{{type}} deleted successfully"
+      },
+      "error": {
+        "create": "Error creating vehicle: {{message}}",
+        "update": "Error updating vehicle: {{message}}",
+        "fileHandle": "Error handling {{type}}: {{message}}",
+        "loadVehicles": "Error loading vehicles",
+        "fileType": {
+          "pdf": "Please upload a PDF file",
+          "image": "Please upload an image file"
+        }
+      },
+      "dashboard_message_admin": {
+        "new": "New Message",
+        "all": "All towing compagnies",
+        "all_tow": "All towings",
+        "search": "Search towing companies...",
+        "name": "Name",
+        "message": "Message",
+        "recipients": "Recipients",
+        "send_all": "Send to all garages",
+        "select": "Select garages",
+        "select_tow": "Select all towings",
+        "content": "Content",
+        "title": "Title",
+        "send": "Send",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      }
+    },
+    "vehicleDetails": {
+      "brand": "Brand",
+      "model": "Model",
+      "delayNeutral": "Delay Neutral",
+      "delayDeactivation": "Delay Deactivation",
+      "yearFrom": "Year From",
+      "yearTo": "Year To",
+      "minutes": "min"
+    }
+  }
+}

@@ -1,0 +1,276 @@
+{
+  "login": {
+    "title": "Connexion à votre compte",
+    "subtitle": "Veuillez entrer votre nom d'utilisateur et votre mot de passe.",
+    "username": {
+      "label": "Nom d'utilisateur",
+      "placeholder": "Saisir votre nom d'utilisateur"
+    },
+    "password": {
+      "label": "Mot de passe",
+      "placeholder": "Saisir votre mot de passe"
+    },
+    "rememberMe": "Se souvenir du mot de passe",
+    "forgotPassword": "Mot de passe oublié ?",
+    "submit": "Se connecter",
+    "errors": {
+      "default": "Un payment est requis, puis vous pouvez vous connecter"
+    }
+  },
+  "FAQ": {
+    "create": "Créer une question",
+    "noFaqs": "Aucune question disponible",
+    "question": {
+      "label": "Question",
+      "required": "Question est requise"
+    },
+    "answer": {
+      "label": "Réponse",
+      "required": "Réponse est requise"
+    },
+    "delete": {
+      "title": "Supprimer",
+      "confirmation": "Etes-vous sûr de vouloir supprimer cette question ?",
+      "cancel": "Annuler",
+      "confirm": "Supprimer"
+    },
+    "language": {
+      "select": "Sélectionner une langue",
+      "english": "Anglais",
+      "french": "Français"
+    },
+    "submit": "Créer",
+    "FaqList": "Liste des questions"
+  },
+  "dashboard": {
+    "garages": {
+      "count": "Nombre d'abonnements: ",
+      "success": "Garage créé avec succès !",
+      "createGargage": "Créer un garage",
+      "vehicle": {
+        "singular": "utilisateur",
+        "plural": "utilisateurs",
+        "noVehicles": "Aucun utilisateurs"
+      },
+      "title": "Gestion des Garages",
+      "search": "Rechercher des garages...",
+      "viewDetails": "Cliquez pour voir les détails",
+      "noDrivers": "Aucun chauffeur assigné",
+      "summary": {
+        "totalGarages": "Total des Garages",
+        "activeGarages": "Garages Actifs",
+        "totalDrivers": "Total des Chauffeurs"
+      },
+      "table": {
+        "garageName": "Nom du Garage",
+        "totalDrivers": "Total Chauffeurs",
+        "details": "Voir les Chauffeurs",
+        "location": "Emplacement",
+        "manager": "Gestionnaire",
+        "status": "Statut",
+        "nameAndSurname": "Prénom et Nom",
+        "phoneNumber": "Numéro de téléphone",
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "email": "Courriel"
+      },
+      "status": {
+        "label": "Statut",
+        "all": "Tous les Garages",
+        "active": "Actif",
+        "inactive": "Inactif",
+        "paid": "Abonnement Payé",
+        "unpaid": "Paiement Dû"
+      },
+      "filters": {
+        "searchPlaceholder": "Rechercher par nom de garage",
+        "status": "Filtrer par statut"
+      },
+      "errors": {
+        "loadFailed": "Échec du chargement des données des garages",
+        "noPermission": "Vous n'avez pas la permission de voir ces données"
+      },
+      "settings": {
+        "title": "Modifier votre mot de passe",
+        "button": "Mettre à jour le mot de passe",
+        "buttonUpdating": "Mise à jour...",
+        "garageName": "Nom du garage",
+        "username": "Nom d'utilisateur",
+        "newPassword": "Nouveau mot de passe",
+        "confirmPassword": "Confirmez le mot de passe",
+        "currentUsername": "Nom d'utilisateur actuel",
+        "newUsername": "Nouveau nom d'utilisateur",
+        "manageBilling": "Gérer les factures"
+      }
+    },
+    "navigation": {
+      "users": "Utilisateurs",
+      "messages": "Messages",
+      "subscriptions": "Abonnements",
+      "faq": "FAQ Admin",
+      "support": "Support/FAQ",
+      "data": "Saisies de données",
+      "settings": "Paramètres",
+      "logout": "Déconnexion"
+    },
+    "users": {
+      "title": "Gestion des Utilisateurs",
+      "search": "Rechercher",
+      "status": {
+        "label": "Statut",
+        "all": "Tous",
+        "active": "Actif",
+        "inactive": "Inactif"
+      },
+      "table": {
+        "nameAndSurname": "Prénom et Nom",
+        "phoneNumber": "Numéro de téléphone",
+        "status": "Statut",
+        "actions": "Actions",
+        "username": "Nom d'utilisateur"
+      },
+
+      "create": {
+        "title": "Créer un utilisateur",
+        "button": "Nouveau utilisateur",
+        "name": "Nom",
+        "tel": "Téléphone",
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "cancel": "Annuler",
+        "confirm": "Créer",
+        "success": "Utilisateur créé avec succès",
+        "error": {
+          "requiredFields": "Veuillez remplir tous les champs obligatoires",
+          "generic": "Une erreur s'est produite lors de la création de l'utilisateur",
+          "noAuth": "Authentification requise",
+          "noUser": "Informations utilisateur non disponibles",
+          "noGarage": "Informations sur le garage non disponibles"
+        }
+      },
+      "edit": {
+        "title": "Modifier l'utilisateur",
+        "name": "Nom",
+        "tel": "Téléphone",
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "status": "Statut",
+        "save": "Enregistrer",
+        "cancel": "Annuler",
+        "success": "Utilisateur mis à jour avec succès",
+        "error": "Erreur lors de la mise à jour de l'utilisateur",
+        "placeholder": "Laisser vide pour conserver le mot de passe actuel"
+      },
+      "delete": {
+        "title": "Supprimer l'utilisateur",
+        "confirmation": "Êtes-vous sûr de vouloir supprimer l'utilisateur ?",
+        "cancel": "Annuler",
+        "confirm": "Supprimer",
+        "success": "Utilisateur supprimé avec succès",
+        "error": "Erreur lors de la suppression de l'utilisateur"
+      }
+    }
+  },
+  "data": {
+    "title": "Gestion des fichiers véhicules",
+    "createVehicle": "Créer un véhicule",
+    "noVehicles": {
+      "empty": "Aucun véhicule trouvé. Créez un véhicule pour gérer ses fichiers.",
+      "noMatch": "Aucun véhicule ne correspond à votre recherche."
+    },
+    "form": {
+      "brand": {
+        "label": "Marque",
+        "required": "La marque est requise"
+      },
+      "model": {
+        "label": "Modèle",
+        "required": "Le modèle est requis"
+      },
+      "yearFrom": {
+        "label": "Année de début",
+        "required": "L'année de début est requise"
+      },
+      "yearTo": {
+        "label": "Année de fin"
+      },
+      "delayTimeNeutral": {
+        "label": "Temps de délai neutre"
+      },
+      "delayTimeDeactivation": {
+        "label": "Temps de délai désactivation"
+      },
+      "files": {
+        "title": "Documents de procédure",
+        "images": "Images",
+        "selectNeutral": "PDF neutre",
+        "selectDeactivation": "PDF désactivation",
+        "selectImage": "image"
+      },
+      "buttons": {
+        "cancel": "Annuler",
+        "create": "Créer le véhicule",
+        "update": "Mettre à jour le véhicule"
+      }
+    },
+    "fileManagement": {
+      "upload": "Télécharger",
+      "update": "Mettre à jour",
+      "uploadedFiles": "Fichiers téléchargés",
+      "neutralProcedure": "procédure neutre",
+      "deactivationProcedure": "procédure de désactivation",
+      "image": "Image",
+      "fileSize": "Taille : {{size}}",
+      "buttons": {
+        "uploadNeutral": "{{action}} PDF neutre",
+        "uploadDeactivation": "{{action}} PDF désactivation",
+        "uploadImage": "{{action}} Image"
+      }
+    },
+    "messages": {
+      "success": {
+        "create": "Véhicule et fichiers créés avec succès",
+        "update": "Véhicule mis à jour avec succès",
+        "fileUpload": "{{type}} téléchargé avec succès",
+        "fileUpdate": "{{type}} mis à jour avec succès",
+        "fileDelete": "{{type}} supprimé avec succès"
+      },
+      "error": {
+        "create": "Erreur lors de la création du véhicule : {{message}}",
+        "update": "Erreur lors de la mise à jour du véhicule : {{message}}",
+        "fileHandle": "Erreur lors du traitement de {{type}} : {{message}}",
+        "loadVehicles": "Erreur lors du chargement des véhicules",
+        "fileType": {
+          "pdf": "Veuillez télécharger un fichier PDF",
+          "image": "Veuillez télécharger un fichier image"
+        }
+      },
+      "dashboard_message_admin": {
+        "new": "Nouveau Message",
+        "all": "Tous les entreprises de dépannage",
+        "all_tow": "Tous les dépanneuses",
+        "search": "Rechercher des garages...",
+        "name": "Nom",
+        "message": "Message",
+        "recipients": "Destinataires",
+        "send_all": "Envoyer à tous les garages",
+        "select": "Sélectionner les garages",
+        "select_tow": "Sélectionner les dépanneuses",
+        "content": "Contenu",
+        "title": "Titre",
+        "send": "Envoyer",
+        "cancel": "Annuler",
+        "delete": "Supprimer"
+      }
+    },
+    "vehicleDetails": {
+      "brand": "Marque",
+      "model": "Modèle",
+      "delayNeutral": "Délai neutre",
+      "delayDeactivation": "Délai désactivation",
+      "yearFrom": "Année début",
+      "yearTo": "Année fin",
+      "minutes": "min"
+    }
+  }
+}
